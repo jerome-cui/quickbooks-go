@@ -1,4 +1,4 @@
-module github.com/levelzerotechnology/quickbooks-go
+module github.com/jerome-cui/quickbooks-go
 
 go 1.18
 
