@@ -6,22 +6,39 @@ import (
 	"strconv"
 )
 
+type AccountType string
+
 const (
-	BankAccountType                  = "Bank"
-	OtherCurrentAssetAccountType     = "Other Current Asset"
-	FixedAssetAccountType            = "Fixed Asset"
-	OtherAssetAccountType            = "Other Asset"
-	AccountsReceivableAccountType    = "Accounts Receivable"
-	EquityAccountType                = "Equity"
-	ExpenseAccountType               = "Expense"
-	OtherExpenseAccountType          = "Other Expense"
-	CostOfGoodsSoldAccountType       = "Cost of Goods Sold"
-	AccountsPayableAccountType       = "Accounts Payable"
-	CreditCardAccountType            = "Credit Card"
-	LongTermLiabilityAccountType     = "Long Term Liability"
-	OtherCurrentLiabilityAccountType = "Other Current Liability"
-	IncomeAccountType                = "Income"
-	OtherIncomeAccountType           = "Other Income"
+	BankAccountType                  AccountType = "Bank"
+	OtherCurrentAssetAccountType     AccountType = "Other Current Asset"
+	FixedAssetAccountType            AccountType = "Fixed Asset"
+	OtherAssetAccountType            AccountType = "Other Asset"
+	AccountsReceivableAccountType    AccountType = "Accounts Receivable"
+	EquityAccountType                AccountType = "Equity"
+	ExpenseAccountType               AccountType = "Expense"
+	OtherExpenseAccountType          AccountType = "Other Expense"
+	CostOfGoodsSoldAccountType       AccountType = "Cost of Goods Sold"
+	AccountsPayableAccountType       AccountType = "Accounts Payable"
+	CreditCardAccountType            AccountType = "Credit Card"
+	LongTermLiabilityAccountType     AccountType = "Long Term Liability"
+	OtherCurrentLiabilityAccountType AccountType = "Other Current Liability"
+	IncomeAccountType                AccountType = "Income"
+	OtherIncomeAccountType           AccountType = "Other Income"
+)
+
+type AccountSubType string
+
+const (
+	AccountsReceivable      AccountSubType = "AccountsReceivable"
+	OtherCurrentAssets      AccountSubType = "OtherCurrentAssets"
+	CashAndCashEquivalents  AccountSubType = "CashAndCashEquivalents"
+	AccountsPayable         AccountSubType = "AccountsPayable"
+	LineOfCredit            AccountSubType = "LineOfCredit"
+	OtherCurrentLiabilities AccountSubType = "OtherCurrentLiabilities"
+	LongTermDebit           AccountSubType = "LongTermDebit"
+	OtherBusinessExpenses   AccountSubType = "OtherBusinessExpenses"
+	SuppliesMaterials       AccountSubType = "SuppliesMaterials"
+	OtherPrimaryIncome      AccountSubType = "OtherPrimaryIncome"
 )
 
 type Account struct {

@@ -11,46 +11,46 @@ import (
 
 // Invoice represents a QuickBooks Invoice object.
 type Invoice struct {
-	Id            string        `json:"Id,omitempty"`
-	SyncToken     string        `json:",omitempty"`
-	MetaData      MetaData      `json:",omitempty"`
-	CustomField   []CustomField `json:",omitempty"`
-	DocNumber     string        `json:",omitempty"`
-	TxnDate       Date          `json:",omitempty"`
-	DepartmentRef ReferenceType `json:",omitempty"`
-	PrivateNote   string        `json:",omitempty"`
-	LinkedTxn     []LinkedTxn   `json:"LinkedTxn"`
+	Id            string         `json:"Id,omitempty"`
+	SyncToken     string         `json:",omitempty"`
+	MetaData      *MetaData      `json:",omitempty"`
+	CustomField   []CustomField  `json:",omitempty"`
+	DocNumber     string         `json:",omitempty"`
+	TxnDate       Date           `json:",omitempty"`
+	DepartmentRef *ReferenceType `json:",omitempty"`
+	PrivateNote   string         `json:",omitempty"`
+	LinkedTxn     []LinkedTxn    `json:"LinkedTxn"`
 	Line          []Line
-	TxnTaxDetail  TxnTaxDetail `json:",omitempty"`
-	CustomerRef   ReferenceType
-	CustomerMemo  MemoRef         `json:",omitempty"`
-	BillAddr      PhysicalAddress `json:",omitempty"`
-	ShipAddr      PhysicalAddress `json:",omitempty"`
-	ClassRef      ReferenceType   `json:",omitempty"`
-	SalesTermRef  ReferenceType   `json:",omitempty"`
-	DueDate       Date            `json:",omitempty"`
+	TxnTaxDetail  *TxnTaxDetail `json:",omitempty"`
+	CustomerRef   *ReferenceType
+	CustomerMemo  *MemoRef         `json:",omitempty"`
+	BillAddr      *PhysicalAddress `json:",omitempty"`
+	ShipAddr      *PhysicalAddress `json:",omitempty"`
+	ClassRef      *ReferenceType   `json:",omitempty"`
+	SalesTermRef  *ReferenceType   `json:",omitempty"`
+	DueDate       Date             `json:",omitempty"`
 	// GlobalTaxCalculation
-	ShipMethodRef                ReferenceType `json:",omitempty"`
-	ShipDate                     Date          `json:",omitempty"`
-	TrackingNum                  string        `json:",omitempty"`
-	TotalAmt                     json.Number   `json:",omitempty"`
-	CurrencyRef                  ReferenceType `json:",omitempty"`
-	ExchangeRate                 json.Number   `json:",omitempty"`
-	HomeAmtTotal                 json.Number   `json:",omitempty"`
-	HomeBalance                  json.Number   `json:",omitempty"`
-	ApplyTaxAfterDiscount        bool          `json:",omitempty"`
-	PrintStatus                  string        `json:",omitempty"`
-	EmailStatus                  string        `json:",omitempty"`
-	BillEmail                    EmailAddress  `json:",omitempty"`
-	BillEmailCC                  EmailAddress  `json:"BillEmailCc,omitempty"`
-	BillEmailBCC                 EmailAddress  `json:"BillEmailBcc,omitempty"`
-	DeliveryInfo                 DeliveryInfo  `json:",omitempty"`
-	Balance                      json.Number   `json:",omitempty"`
-	TxnSource                    string        `json:",omitempty"`
-	AllowOnlineCreditCardPayment bool          `json:",omitempty"`
-	AllowOnlineACHPayment        bool          `json:",omitempty"`
-	Deposit                      json.Number   `json:",omitempty"`
-	DepositToAccountRef          ReferenceType `json:",omitempty"`
+	ShipMethodRef                *ReferenceType `json:",omitempty"`
+	ShipDate                     Date           `json:",omitempty"`
+	TrackingNum                  string         `json:",omitempty"`
+	TotalAmt                     json.Number    `json:",omitempty"`
+	CurrencyRef                  *ReferenceType `json:",omitempty"`
+	ExchangeRate                 json.Number    `json:",omitempty"`
+	HomeAmtTotal                 json.Number    `json:",omitempty"`
+	HomeBalance                  json.Number    `json:",omitempty"`
+	ApplyTaxAfterDiscount        bool           `json:",omitempty"`
+	PrintStatus                  string         `json:",omitempty"`
+	EmailStatus                  string         `json:",omitempty"`
+	BillEmail                    *EmailAddress  `json:",omitempty"`
+	BillEmailCC                  *EmailAddress  `json:"BillEmailCc,omitempty"`
+	BillEmailBCC                 *EmailAddress  `json:"BillEmailBcc,omitempty"`
+	DeliveryInfo                 *DeliveryInfo  `json:",omitempty"`
+	Balance                      json.Number    `json:",omitempty"`
+	TxnSource                    string         `json:",omitempty"`
+	AllowOnlineCreditCardPayment bool           `json:",omitempty"`
+	AllowOnlineACHPayment        bool           `json:",omitempty"`
+	Deposit                      json.Number    `json:",omitempty"`
+	DepositToAccountRef          *ReferenceType `json:",omitempty"`
 }
 
 type DeliveryInfo struct {

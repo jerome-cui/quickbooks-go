@@ -29,7 +29,7 @@ type UserInfoResponse struct {
 /*
  * Method to retrive userInfo - email, address, name, phone etc
  */
-func (c *Client) GetUserInfo(accessToken string) (*UserInfoResponse, error) {
+func (c *PlatformClient) GetUserInfo(accessToken string) (*UserInfoResponse, error) {
 	log.Println("Inside GetUserInfo ")
 	client := &http.Client{}
 
