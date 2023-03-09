@@ -6,6 +6,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"errors"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"net/url"
@@ -131,7 +132,7 @@ func (c *Client) RevokeToken(refreshToken string) error {
 	}
 
 	if resp.StatusCode != http.StatusOK {
-		return errors.New(string(body))
+		return fmt.Errorf("code: %d, body: %s", resp.StatusCode, string(body))
 	}
 
 	c.Client = nil
