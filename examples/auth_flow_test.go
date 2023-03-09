@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/levelzerotechnology/quickbooks-go"
+	"github.com/jerome-cui/quickbooks-go"
 	"github.com/stretchr/testify/require"
 )
 
